@@ -25,8 +25,6 @@ const filterSlice = createSlice({
             state.year = action.payload.year;
             state.ageRating = action.payload.ageRating;
             state.country = action.payload.country;
-            state.filteredMovie = action.payload.filteredMovie;
-            state.currentPage = action.payload.currentPage;
         },
         getFilteredMovie(state, action: PayloadAction<{ newFilteredMovie: IMovieItem[] }>) {
             if (state.currentPage > 1) {

@@ -16,7 +16,6 @@ export function Main() {
     const { ageRating, country, year, currentPage, filteredMovie } = useAppSelector(state => state.filter);
     const { data, error } = useGetMovieQuery({ page: page });
     const { data: fulfilledData } = useGetFulfiledMovieQuery({ currentPage, ageRating, country, year });
-    console.log(currentPage)
 
     const selectedMovie = (movie: IMovieItem) => {
         navigation(`/${movie.id}`, { replace: true });
@@ -51,13 +50,10 @@ export function Main() {
         movies = movieList;
     }
 
-
     return (
         <Wrapper>
-
             {error ? <Error value='Ошибка сервера' /> :
                 <>
-
                     <MovieList onClick={selectedMovie} movieList={movies} />
                     {!value && ((ageRating || country || year) && fulfilledData ? fulfilledData?.docs.length >= 10 : movieList.length >= 10) &&
                         <StyledButton
@@ -68,7 +64,6 @@ export function Main() {
                         </StyledButton>
                     }
                 </>}
-
         </Wrapper>
     );
 }

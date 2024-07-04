@@ -20,7 +20,8 @@ export default function MovieItem(props: IMovieItemProps) {
                     </CardTitle>
                     <CardDescription color="text.secondary">
                         {enName && <CardWrapperText><CardSubtitle>{enName} </CardSubtitle>, </CardWrapperText>}
-                        {year && <span>{year} ,</span>}
+                        {year && <span>{year}</span>}
+                        {year && ageRating && <span>, </span>}
                         {ageRating && <span>{ageRating}+</span>}
                     </CardDescription>
                     <CardText color="text.secondary">

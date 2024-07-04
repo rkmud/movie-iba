@@ -13,7 +13,7 @@ export const movieApi = createApi({
     }),
     endpoints: (build) => ({
         getFulfiledMovie: build.query<IMovieData, { currentPage?: number, ageRating?: string, year?: string, country?: string }>({
-            query: ({ currentPage = 1, ageRating, country, year }) => {
+            query: ({ currentPage, ageRating, country, year }) => {
                 let url = `/v1.4/movie?limit=12&page=${currentPage}`;
                 if (ageRating) {
                     url += `&ageRating=${ageRating}`;
@@ -22,7 +22,7 @@ export const movieApi = createApi({
                     url += `&year=${year}`;
                 }
                 if (country) {
-                    url += `&countries.naшщыщячыц1ё6me=${country}`;
+                    url += `&countries.name=${country}`;
                 }
                 return {
                     url,
@@ -52,7 +52,7 @@ export const movieApi = createApi({
         }),
         getSearch: build.query<IMovieData, { search: string }>({
             query: (arg) => ({
-                url: `/v1.4/movie/search?limit=56&&query=${arg.search}`,
+                url: `/v1.4/movie/search?limit=12&&query=${arg.search}`,
                 method: 'GET',
             })
         }),

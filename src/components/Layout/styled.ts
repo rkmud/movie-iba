@@ -10,7 +10,7 @@ export const MainContent = styled('div')(({ theme }) => ({
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     padding: '100px 30px 40px 30px',
     maxWidth: '1700px',
     [theme.breakpoints.down('sm')]: {

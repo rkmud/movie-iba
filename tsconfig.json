@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+      "allowUnreachableCode": false,
+      "exactOptionalPropertyTypes": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
+      "noImplicitThis": true,
+      "noImplicitAny": true,
+      "noImplicitReturns": true,
+      "alwaysStrict": true,
+      "strictBindCallApply": true,
+      "strictFunctionTypes": true,
+      "strictNullChecks": true,
+      "strictPropertyInitialization": true,
+      "jsx": "react",
+      "esModuleInterop": true,
+      "allowJs": true,
+      "checkJs": true,
+      "isolatedModules": true,
+      "baseUrl": "./",
+      "paths": {
+        "@root/*": ["src/*"],
+        "@components/*": ["src/components/*"],
+        "@hooks/*": ["src/hooks/*"],
+        "@constants/*": ["src/constants/*"],
+        "@store/*": ["src/store/*"],
+        "@types/*": ["src/types/*"],
+      }
+    },
+    "include": ["src/**/**/*"],
+    "exclude": ["node_modules"]
+}

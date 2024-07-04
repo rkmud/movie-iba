@@ -7,7 +7,8 @@ export const Wrapper = styled('div')({
     flexDirection: 'column',
     alignItems: 'center',
     maxWidth: '1700px',
-    flexGrow: '1'
+    flexGrow: '1',
+    width: '100%'
 });
 
 export const StyledButton = styled(Button)({

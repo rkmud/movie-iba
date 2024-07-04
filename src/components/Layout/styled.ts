@@ -13,6 +13,7 @@ export const MainContent = styled('div')(({ theme }) => ({
     alignItems: 'flex-start',
     padding: '100px 30px 40px 30px',
     maxWidth: '1700px',
+    flexGrow: '1',
     [theme.breakpoints.down('sm')]: {
         padding: '145px 20px 40px 20px ',
     },

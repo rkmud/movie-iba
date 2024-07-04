@@ -6,6 +6,9 @@ export const Wrapper = styled('div')({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    flexGrow: '1',
+    justifyContent: 'center',
+    width: '100%'
 });
 
 export const Icon = styled(WarningOutlinedIcon)(({ theme }) => ({

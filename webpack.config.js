@@ -4,7 +4,8 @@ module.exports = {
     mode: 'development',
     entry: './src/index.tsx',
     output: { 
-        path: path.join(__dirname, '/dist'),
+        path: path.join(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js'
     },
 
